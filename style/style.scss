@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap");
+
+// COLOR PALLETE
+$color1: #33121e;
+$color2: #5f2b13;
+$color3: #b31b00;
+$color4: #ff0800;
+$color5: #ff8c00;
+$color6: #ffaf25;
+$color7: #fdf483;
+$color8: #f1ebda;
+
+// box shadow
+$boxShadow: 0px 3px 13px #000000;
+
+body {
+	margin: 3rem 5rem;
+	// Background settings
+	background: linear-gradient($color7, $color3);
+	// Backgroung color to include all the screen
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	.background-music {
+		margin: 2rem 0;
+		text-align: end;
+	}
+	// Styling article: header,main,footer
+	#main-body {
+		background: $color8;
+		padding: 5rem 8rem;
+		box-shadow: $boxShadow;
+		text-align: center;
+
+		//Styling header:icons, h1 and subtitle
+		header {
+			display: grid;
+			grid-template-columns: 1fr 3fr 1fr;
+			justify-items: center;
+			.headerIcon {
+				width: 100%;
+				align-self: center;
+			}
+			h1 {
+				font-family: "Rye", serif;
+				font-weight: bold;
+				font-style: normal;
+				text-transform: uppercase;
+				text-align: center;
+				font-size: 4rem;
+				color: $color1;
+				justify-self: center;
+				align-self: center;
+
+				#subtitle {
+					font-size: 2rem;
+				}
+			}
+		}
+		// Styling nain elements: h2, blockquote,button,section
+		main {
+			line-height: 3rem;
+			font-family: "Special Elite", system-ui;
+			font-weight: normal;
+			font-style: normal;
+			h2 {
+				font-size: 2rem;
+				color: $color2;
+			}
+			.intro {
+				margin-top: 5rem;
+				p {
+					color: $color1;
+					font-size: 1.5rem;
+				}
+				.img-of-gold {
+					text-align: center;
+					img {
+						width: 30%;
+						max-width: 512px;
+					}
+				}
+				// Button Style
+				.btn-div {
+					text-align: center;
+					margin-bottom: 10rem;
+					.btn-sign-up {
+						display: inline-block;
+						font-family: "Special Elite", system-ui;
+						font-size: 1.5rem;
+						color: $color3;
+						text-decoration: none;
+						border: 3px solid $color6;
+						background-color: $color6;
+						line-height: 2rem;
+						padding: 2rem 3rem;
+						// Task:background color smoothly when hovered over.
+						transition: background-color 1s;
+					}
+					// Button hover effect
+					.btn-sign-up:hover {
+						color: $color6;
+						background-color: $color3;
+						// boredr-hover effect
+						border: 3px solid $color6;
+					}
+					//Task:Adding a decorative element pseudo-element after the button text.
+					.btn-sign-up::after {
+						content: "☘";
+						font-size: 2rem;
+					}
+				}
+			}
+			.img-section {
+				margin-top: 12rem;
+				h2 {
+					font-size: 2rem;
+				}
+				#grid-container {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					grid-template-rows: repeat(2, 1fr);
+					place-items: center;
+					place-content: center;
+					gap: 1rem;
+					.grid-img .wanted-img {
+						width: 70%;
+					}
+					.grid-img {
+						padding: 2rem;
+						transition: all 1s;
+						blockquote {
+							font-size: 1.2rem;
+						}
+
+						blockquote::after {
+							content: "I found this Person!";
+							opacity: 0;
+							transition: all 1s;
+							font-size: 2rem;
+							color: $color4;
+							display: block;
+						}
+					}
+					.grid-img:hover {
+						//Task:scalimg up slightly
+						transform: scale(1.1);
+						cursor: pointer;
+
+						::after {
+							opacity: 1;
+						}
+					}
+					// Task change background color when you click on an img
+					.grid-img:active {
+						background-color: $color6;
+					}
+				}
+			}
+		}
+		footer {
+			display: grid;
+			margin-top: 5rem;
+			grid-template-rows: 2fr auto;
+			img {
+				align-self: center;
+				justify-self: center;
+				width: 20%;
+			}
+			p {
+				line-height: 3rem;
+				font-family: "Special Elite", system-ui;
+				font-weight: normal;
+				font-style: normal;
+				font-size: 3rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	body {
+		#main-body {
+			padding: 5rem;
+			header {
+				display: grid;
+				grid-template-columns: 1fr;
+				justify-content: center;
+
+				h1 {
+					#subtitle {
+						font-size: 1rem;
+					}
+				}
+				// hide headerIcons on small screens
+				.headerIcon {
+					display: none;
+				}
+			}
+			main {
+				h2 {
+					font-size: 1.5rem;
+				}
+				.intro {
+					p {
+						font-size: 1.2rem;
+					}
+					.img-of-gold {
+						text-align: center;
+						img {
+							width: 50%;
+						}
+					}
+				}
+				.btn-div {
+					.btn-sign-up {
+						font-size: 1rem;
+						line-height: 2rem;
+						padding: 1.5rem;
+					}
+				}
+				.img-section {
+					h2 {
+						font-size: 1.5rem;
+					}
+					#grid-container {
+						display: grid;
+						grid-template-columns: 1fr;
+						grid-template-rows: repeat(4, 1fr);
+						gap: 1rem;
+					}
+					.grid-img:hover {
+						//Task:scalimg up slightly
+						transform: scale(1);
+					}
+				}
+			}
+			footer {
+				img {
+					width: 30%;
+				}
+				p {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}

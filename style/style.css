@@ -1,0 +1,201 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap");
+body {
+  margin: 3rem 5rem;
+  background: linear-gradient(#fdf483, #b31b00);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+body .background-music {
+  margin: 2rem 0;
+  text-align: end;
+}
+body #main-body {
+  background: #f1ebda;
+  padding: 5rem 8rem;
+  box-shadow: 0px 3px 13px #000000;
+  text-align: center;
+}
+body #main-body header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  justify-items: center;
+}
+body #main-body header .headerIcon {
+  width: 100%;
+  align-self: center;
+}
+body #main-body header h1 {
+  font-family: "Rye", serif;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  color: #33121e;
+  justify-self: center;
+  align-self: center;
+}
+body #main-body header h1 #subtitle {
+  font-size: 2rem;
+}
+body #main-body main {
+  line-height: 3rem;
+  font-family: "Special Elite", system-ui;
+  font-weight: normal;
+  font-style: normal;
+}
+body #main-body main h2 {
+  font-size: 2rem;
+  color: #5f2b13;
+}
+body #main-body main .intro {
+  margin-top: 5rem;
+}
+body #main-body main .intro p {
+  color: #33121e;
+  font-size: 1.5rem;
+}
+body #main-body main .intro .img-of-gold {
+  text-align: center;
+}
+body #main-body main .intro .img-of-gold img {
+  width: 30%;
+  max-width: 512px;
+}
+body #main-body main .intro .btn-div {
+  text-align: center;
+  margin-bottom: 10rem;
+}
+body #main-body main .intro .btn-div .btn-sign-up {
+  display: inline-block;
+  font-family: "Special Elite", system-ui;
+  font-size: 1.5rem;
+  color: #b31b00;
+  text-decoration: none;
+  border: 3px solid #ffaf25;
+  background-color: #ffaf25;
+  line-height: 2rem;
+  padding: 2rem 3rem;
+  transition: background-color 1s;
+}
+body #main-body main .intro .btn-div .btn-sign-up:hover {
+  color: #ffaf25;
+  background-color: #b31b00;
+  border: 3px solid #ffaf25;
+}
+body #main-body main .intro .btn-div .btn-sign-up::after {
+  content: "☘";
+  font-size: 2rem;
+}
+body #main-body main .img-section {
+  margin-top: 12rem;
+}
+body #main-body main .img-section h2 {
+  font-size: 2rem;
+}
+body #main-body main .img-section #grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  place-content: center;
+  gap: 1rem;
+}
+body #main-body main .img-section #grid-container .grid-img .wanted-img {
+  width: 70%;
+}
+body #main-body main .img-section #grid-container .grid-img {
+  padding: 2rem;
+  transition: all 1s;
+}
+body #main-body main .img-section #grid-container .grid-img blockquote {
+  font-size: 1.2rem;
+}
+body #main-body main .img-section #grid-container .grid-img blockquote::after {
+  content: "I found this Person!";
+  opacity: 0;
+  transition: all 1s;
+  font-size: 2rem;
+  color: #ff0800;
+  display: block;
+}
+body #main-body main .img-section #grid-container .grid-img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+body #main-body main .img-section #grid-container .grid-img:hover ::after {
+  opacity: 1;
+}
+body #main-body main .img-section #grid-container .grid-img:active {
+  background-color: #ffaf25;
+}
+body #main-body footer {
+  display: grid;
+  margin-top: 5rem;
+  grid-template-rows: 2fr auto;
+}
+body #main-body footer img {
+  align-self: center;
+  justify-self: center;
+  width: 20%;
+}
+body #main-body footer p {
+  line-height: 3rem;
+  font-family: "Special Elite", system-ui;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+  body #main-body {
+    padding: 5rem;
+  }
+  body #main-body header {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  body #main-body header h1 #subtitle {
+    font-size: 1rem;
+  }
+  body #main-body header .headerIcon {
+    display: none;
+  }
+  body #main-body main h2 {
+    font-size: 1.5rem;
+  }
+  body #main-body main .intro p {
+    font-size: 1.2rem;
+  }
+  body #main-body main .intro .img-of-gold {
+    text-align: center;
+  }
+  body #main-body main .intro .img-of-gold img {
+    width: 50%;
+  }
+  body #main-body main .btn-div .btn-sign-up {
+    font-size: 1rem;
+    line-height: 2rem;
+    padding: 1.5rem;
+  }
+  body #main-body main .img-section h2 {
+    font-size: 1.5rem;
+  }
+  body #main-body main .img-section #grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  body #main-body main .img-section .grid-img:hover {
+    transform: scale(1);
+  }
+  body #main-body footer img {
+    width: 30%;
+  }
+  body #main-body footer p {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */

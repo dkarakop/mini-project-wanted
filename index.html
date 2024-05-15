@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="./images/logo.png" />
+		<title>Wanted</title>
+		<link rel="stylesheet" href="./style/style.css" />
+	</head>
+	<body>
+		<!-- background music -->
+		<div class="background-music">
+			<audio controls autoplay>
+				<source src="sound/western-theme.mp3" type="audio/mpeg" />
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+
+		<!-- Include header, main and sections into a disv for making independent page effect -->
+		<div id="main-body">
+			<header>
+				<img
+					class="headerIcon hide-on-small-screens"
+					src="./images/sheriff.png"
+					alt="An illustrated image of a wanted person, captured in all their notorious glory."
+				/>
+				<!-- Main Title of the site -->
+				<h1>
+					Wanted <br />
+					<span id="subtitle"
+						>The Wild West's Most Notorious Outlaws</span
+					>
+				</h1>
+				<img
+					class="headerIcon hide-on-small-screens"
+					src="./images/wanted.png"
+					alt="An illustrated image of a wanted person, captured in all their notorious glory."
+				/>
+			</header>
+			<main>
+				<section class="intro">
+					<h2>
+						Are you ready to saddle up and become the next Bounty
+						Hunter?
+					</h2>
+					<p>
+						We're inviting you to join the ranks of the most daring
+						and notorious in the Wild West! So, grab your hat, your
+						six-shooter, and your sense of humor , and let's hunt
+						down the most notorious wanted people together. <br />
+						Remember, in the Wild West, there's always a reward for
+						the bold!
+					</p>
+					<div class="img-of-gold">
+						<img
+							src="./images/money-bag.png"
+							alt="A bag of money as reward for the best
+						Bounty hunter"
+						/>
+					</div>
+					<!-- Create a div for center the button -->
+					<div class="btn-div" onclick="playMusic()">
+						<!-- <a> tag for connecting the button with the section "#btn-sign-up" -->
+						<a class="btn-sign-up" href="#btn-sign-up">
+							Saddle Up and Sign Up: <br />
+							Your Adventure Awaits!
+						</a>
+					</div>
+				</section>
+				<!-- A section about image gallery with a grid layout.  -->
+				<section id="btn-sign-up" class="img-section">
+					<h2>
+						Riding into the Heart of Infamy: <br />
+						The Wild West's Most Notorious Outlaws!
+					</h2>
+					<!-- Grid for image gallery -->
+					<div id="grid-container">
+						<div class="grid-img" onclick="playMusic()">
+							<img
+								class="wanted-img"
+								src="./images/bartender.png"
+								alt="bartender"
+							/>
+							<!-- Caption about img -->
+							<h2 class="grid-caption">Bartender Bill!</h2>
+							<blockquote>
+								<!-- use of br-so after message be after it -->
+								The Bill Who Wasn't Always on the Right Side!<br />
+							</blockquote>
+						</div>
+						<div class="grid-img" onclick="playMusic()">
+							<img
+								class="wanted-img"
+								src="./images/cowboy.png"
+								alt="cowboy"
+							/>
+							<h2 class="grid-caption">Bucking Bronco Buck!</h2>
+							<blockquote>
+								<!-- use of br-so after message be after it -->
+								The Buck Who Wasn't Always Bucking
+							</blockquote>
+						</div>
+						<div class="grid-img" onclick="playMusic()">
+							<img
+								class="wanted-img"
+								src="./images/cowgirl.png"
+								alt="cowgirl"
+							/>
+							<h2 class="grid-caption">Rodeo Rosie!</h2>
+							<blockquote>
+								<!-- use of br-so after message be after it -->
+								The Rosie Who Wasn't Always on the Rodeo!
+							</blockquote>
+						</div>
+						<div class="grid-img" onclick="playMusic()">
+							<img
+								class="wanted-img"
+								src="./images/dancer.png"
+								alt="dancer"
+							/>
+							<h2 class="grid-caption">Kicking Kitty!</h2>
+							<blockquote>
+								<!-- use of br-so after message be after it -->
+								The Kitty Who Wasn't Always Kicking!
+							</blockquote>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer>
+				<img
+					class="img-footer"
+					src="./images/skull.png"
+					alt="A bull's skull in the wild dessert!"
+				/>
+				<p class="p-footer">Be Quick or Be Dead!</p>
+			</footer>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
