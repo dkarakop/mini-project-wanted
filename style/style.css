@@ -183,15 +183,16 @@ body #main-body footer .icons-source {
 }
 @media (max-width: 768px) {
   body #main-body header {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
+    flex-direction: column;
   }
   body #main-body header h1 #subtitle {
     font-size: 1rem;
   }
-  body #main-body header .headerIcon {
+  body #main-body header #wanted-sheriff {
     display: none;
+  }
+  body #main-body header #wanted-thief {
+    width: 50%;
   }
   body #main-body main h2 {
     font-size: 1.5rem;

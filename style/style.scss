@@ -222,18 +222,17 @@ body {
 	body {
 		#main-body {
 			header {
-				display: grid;
-				grid-template-columns: 1fr;
-				justify-content: center;
-
+				flex-direction: column;
 				h1 {
 					#subtitle {
 						font-size: 1rem;
 					}
 				}
-				// hide headerIcons on small screens
-				.headerIcon {
+				#wanted-sheriff {
 					display: none;
+				}
+				#wanted-thief {
+					width: 50%;
 				}
 			}
 			main {
